@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Assign label
         env:
-          TITLE: ${{gitgub.event.issue.title}}
+          TITLE: ${{ gitgub.event.issue.title }}
         run: |
           issue_title="${{ github.event.issue.title }}"
           if [[ "$issue_title" == *"bug"* ]]; then
