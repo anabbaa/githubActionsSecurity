@@ -11,7 +11,7 @@ jobs:
         env:
           TITLE: ${{ gitgub.event.issue.title }}
         run: |
-          if [[ "$issue_title" == *"bug"* ]]; then
+          if [[ "$TITLE" == *"bug"* ]]; then
           echo "Issue is about a bug!"
           else
           echo "Issue is not about a bug"
